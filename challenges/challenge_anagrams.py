@@ -50,7 +50,6 @@ def is_anagram(first_string, second_string):
         first_string_list, 0, len(first_string_list) - 1)
     sort_second_string = quicksort(
         second_string_list, 0, len(second_string_list) - 1)
-    
     # print(sort_first_string)
 
     if sort_first_string == sort_second_string:
