@@ -6,7 +6,7 @@ def study_schedule(permanence_period, target_time):
         for index in permanence_period:
             start_time = index[0]
             end_time = index[1]
-            if (start_time <= target_time and target_time <= end_time):
+            if (start_time <= target_time <= end_time):
                 count += 1
         return count
     except TypeError:
