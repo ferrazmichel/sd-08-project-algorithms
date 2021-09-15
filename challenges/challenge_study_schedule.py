@@ -1,6 +1,3 @@
-from typing import Counter
-
-
 def study_schedule(permanence_period, target_time):
     try:
         count = 0
