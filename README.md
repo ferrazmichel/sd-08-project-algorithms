@@ -1,4 +1,5 @@
 <!-- 
+https://github.com/tryber/sd-08-project-algorithms/pull/15
  -->
 ### Termos e acordos
 
