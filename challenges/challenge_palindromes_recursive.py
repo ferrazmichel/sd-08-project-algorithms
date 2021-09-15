@@ -12,9 +12,9 @@ def is_palindrome_recursive(word, low_index, high_index):
 
 # Solução encontrada no link:
 # https://www.geeksforgeeks.org/recursive-function-check-string-palindrome/
-# Se houver um único caractere ele retorna True, por isso a comparação entre 
+# Se houver um único caractere ele retorna True, por isso a comparação entre
 # low e high;
-# Se a palava no index low for diferente no index high retorna False, pois 
+# Se a palava no index low for diferente no index high retorna False, pois
 # eles não correspondem;
 # Se index low for menor que o high ele faz a recursividade aumentado o low
 # e diminuindo o high.
