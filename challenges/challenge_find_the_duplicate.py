@@ -1,5 +1,5 @@
 def find_duplicate(nums):
-    counter = 0 
+    counter = 0
     if len(nums) <= 2:
         return False
     tested_number = nums[0]
