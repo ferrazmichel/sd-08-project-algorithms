@@ -1,5 +1,6 @@
 import random
 import time
+
 # Smoothsort
 # Jamie St Martin
 # with reference to http://www.keithschwarz.com/smoothsort/
@@ -71,7 +72,9 @@ def _create_heap(arr):
         _add_new_root(size_list)
 
         # Swap the root nodes of the trees. Return [heap index, size index]
-        idx, size_idx = _fix_roots(arr, size_list, heap_end, len(size_list) - 1)
+        idx, size_idx = _fix_roots(
+            arr, size_list, heap_end, len(size_list) - 1
+        )
 
         # Fix the tree that now has the new node
         _sift_down(arr, idx, size_list[size_idx])
@@ -118,7 +121,7 @@ def _fix_roots(heap, sizes, start_heap_idx, start_size_idx):
         # tree is not 0 or 1.
         if sizes[size_cur] > 1:
             right = cur - 1
-            left = right - L(sizes[size_cur]-2)
+            left = right - L(sizes[size_cur] - 2)
             if heap[next] <= heap[right] or heap[next] <= heap[left]:
                 break
 
@@ -132,7 +135,9 @@ def _fix_roots(heap, sizes, start_heap_idx, start_size_idx):
     return (cur, size_cur)
 
 
-# Fixes the tree of size tree_size rooted at root_idx in heap, where heap is otherwise a valid heap
+# Fixes the tree of size tree_size rooted at root_idx in heap,
+# where heap is otherwise a valid heap
+
 def _sift_down(heap, root_idx, tree_size):
     cur = root_idx
     # continue iterating until there are no child nodes
