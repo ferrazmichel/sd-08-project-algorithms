@@ -6,6 +6,7 @@ def is_anagram(first_string, second_string):
 
     return result1 == result2
 
+
 def merge_sort(array):
     if len(array) <= 1:
         return array

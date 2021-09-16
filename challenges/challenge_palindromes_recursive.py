@@ -12,4 +12,3 @@ def is_palindrome_recursive(word, low_index, high_index):
                 len(word[1: high_index])-1
             )
         )
-    
