@@ -30,7 +30,7 @@ def is_anagram(first_string, second_string):
 
     if lista == lista1:
         return True
-        
+
     if lista != lista1:
         return False
     return is_anagram(first_string, second_string)
