@@ -7,10 +7,10 @@ def is_anagram(first_string, second_string):
     if len(lista) != len(lista1):
         return False
 
-    merge_sort(lista)
-    merge_sort(lista1)
+    new_list = merge_sort(lista)
+    new_list1 = merge_sort(lista1)
 
-    if lista == lista1:
+    if new_list == new_list1:
         return True
     else:
         return False
