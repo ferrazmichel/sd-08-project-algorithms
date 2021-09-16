@@ -47,7 +47,3 @@ def find_duplicate(nums):
             return False
 
     return has_repeat(value_repeat)
-
-
-r = find_duplicate([3, 1, 2, 4, 6, 5, 7, 7, 7, 8])
-print(r)
