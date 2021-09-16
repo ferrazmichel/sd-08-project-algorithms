@@ -5,5 +5,5 @@ def study_schedule(permanence_period, target_time):
             if i[0] <= target_time <= i[1]:
                 times_shown += 1
         return times_shown
-    except:
+    except TypeError:
         return None
