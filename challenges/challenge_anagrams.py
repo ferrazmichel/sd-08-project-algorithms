@@ -1,4 +1,4 @@
-def sort_string(string, criteria=None):
+def sort_string(string):
     """recebe uma string e ordena as letras
     em ordem alfabética"""
     string_list = list(string)
