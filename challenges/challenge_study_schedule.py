@@ -1,21 +1,13 @@
 def study_schedule(permanence_period, target_time):
-    for tuple in permanence_period:       
-        if not all(isinstance(n, int) for n in tuple):
-            return None
-
     if not isinstance(target_time, int):
         return None
 
-    times = []
+    target_time_occurrence = 0
 
-    for login, logoff in permanence_period:
-        for time in range(login, logoff +1):
-            times.append(time)
+    for time_range in permanence_period:
+        if not all(isinstance(n, int) for n in time_range):
+            return None
+        if time_range[0] <= target_time <= time_range[1]:
+            target_time_occurrence += 1
 
-    return times.count(target_time)
-
-permanence_period = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
-
-# for tuple in permanence_period:       
-#     print(all(isinstance(n, int) for n in tuple))
-  
+    return target_time_occurrence
