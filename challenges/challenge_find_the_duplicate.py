@@ -6,6 +6,6 @@ def find_duplicate(nums):
         return False
     try:
         return ([item for item, count in
-        collections.Counter(nums).items() if count > 1][0])
+            collections.Counter(nums).items() if count > 1][0])
     except IndexError:
         return False
