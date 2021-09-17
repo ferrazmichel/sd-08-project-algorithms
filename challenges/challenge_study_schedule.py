@@ -10,7 +10,7 @@ def study_schedule(permanence_period, target_time):
         return None
 
     return count
-# iteração no permanece_period que irá 'contar' a qtd de 
+# iteração no permanece_period que irá 'contar' a qtd de
 # estudantes que tão consumindo o conteúdo baseado nas tuplas,
-# que representam horário de entrada e saída do sistema. 
-# Verificar o teste do arquivo.
+# que representam horário de entrada e saída do sistema.
+# Verificar o teste do arquivo. Iteração feita nas tuplas
