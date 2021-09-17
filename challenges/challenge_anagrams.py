@@ -40,11 +40,11 @@ def partition(array, low, high):
 
     return i + 1
 
+
 def is_anagram(first_string, second_string):
-    
-    if first_string == None or second_string == None:
+    if first_string is None or second_string is None:
         return False
-    
+
     a = list(first_string)
     b = list(second_string)
 
