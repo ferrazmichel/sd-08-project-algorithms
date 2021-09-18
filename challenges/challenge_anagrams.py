@@ -31,4 +31,3 @@ def merge(left, right):
         new_string += right[right_cursor]
 
     return new_string
-
