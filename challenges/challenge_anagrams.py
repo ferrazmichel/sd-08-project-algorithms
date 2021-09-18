@@ -1,46 +1,30 @@
-# algoritmo utilizado -> shell sort
-def my_sort(string):
-    h = len(string) // 2
-    while h > 0:
-        i = h
-        while i < len(string):
-            temp = string[i]
-            changed = False
-            j = i - h
-            while j >= 0 and string[j] > temp:
-                string[j + h] = string[j]
-                changed = True
-                j -= h
-                if changed:
-                    string[j + h] = temp
-                i += 1
-        h = h // 2
+def merge(left, right, merged):
+    left_cursor, right_cursor = 0, 0
+    while left_cursor < len(left) and right_cursor < len(right):
+        if left[left_cursor] <= right[right_cursor]:
+            merged[left_cursor + right_cursor] = left[left_cursor]
+            left_cursor += 1
+        else:
+            merged[left_cursor + right_cursor] = right[right_cursor]
+            right_cursor += 1
+    for left_cursor in range(left_cursor, len(left)):
+        merged[left_cursor + right_cursor] = left[left_cursor]
+    for right_cursor in range(right_cursor, len(right)):
+        merged[left_cursor + right_cursor] = right[right_cursor]
+    return merged
+
+
+def mergesort(array):
+    if len(array) <= 1:
+        return array
+    mid = len(array) // 2
+    left, right = mergesort(array[:mid]), mergesort(array[mid:])
+    return merge(left, right, array.copy())
 
 
 def is_anagram(first_string, second_string):
+    if not first_string or not second_string:
+        return False
     if len(first_string) != len(second_string):
         return False
-    return my_sort(list(first_string)) == my_sort(list(second_string))
-
-
-if __name__ == "__main__":
-
-    first_string = "amor"
-    second_string = "roma"
-    print(is_anagram(first_string, second_string))
-
-    first_string = "pedra"
-    second_string = "perda"
-    print(is_anagram(first_string, second_string))
-
-    first_string = "pato"
-    second_string = "tapo"
-    print(is_anagram(first_string, second_string))
-
-    first_string = "coxinha"
-    second_string = "empada"
-    print(is_anagram(first_string, second_string))
-
-    first_string = "pedra"
-    second_string = "pedro"
-    print(is_anagram(first_string, second_string))
+    return mergesort(list(first_string)) == mergesort(list(second_string))
