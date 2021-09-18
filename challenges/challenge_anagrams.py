@@ -14,6 +14,7 @@ def merge(left, right, merged):
     return merged
 
 
+# Trybe - Bloco 36 -  Algoritmos
 def mergesort(array):   # complexidade de O(n log n)
     if len(array) <= 1:
         return array
