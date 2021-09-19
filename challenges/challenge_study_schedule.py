@@ -4,6 +4,6 @@ def study_schedule(permanence_period, target_time):
         try:
             if start <= target_time <= end:
                 counter += 1
-        except:
+        except Exception:
             return None
     return counter

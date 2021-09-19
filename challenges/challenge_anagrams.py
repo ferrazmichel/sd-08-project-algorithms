@@ -1,6 +1,3 @@
-from challenges.challenge_palindromes_recursive import is_palindrome_recursive
-
-
 def merge(stringA, stringB):
     left_finger = 0
     right_finger = 0
