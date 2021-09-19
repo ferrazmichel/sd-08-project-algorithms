@@ -12,3 +12,4 @@ def study_schedule(permanence_period, target_time):
             count += 1
 
     return count
+    
