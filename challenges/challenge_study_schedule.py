@@ -1,9 +1,4 @@
-import numbers
-
-
 def study_schedule(permanence_period, target_time):
-    if not isinstance(target_time, numbers.Number):
-        return None
     result = 0
     try:
         for period in permanence_period:
