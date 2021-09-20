@@ -6,7 +6,9 @@ def find_duplicate(nums):
     nums_copy.sort()
 
     for index in range(1, len(nums_copy)):
-        if nums_copy[index] == nums_copy[index - 1]:
-            return nums_copy[index]
+        num1 = nums_copy[index]
+        num2 = nums_copy[index - 1]
+        if num1 == num2 and min(num1, num2) > 0:
+            return num1
 
     return False
