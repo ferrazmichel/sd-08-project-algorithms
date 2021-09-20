@@ -1,3 +1,5 @@
+# Solução em:
+# https://www.geeksforgeeks.org/recursive-function-check-string-palindrome/
 def is_palindrome_recursive(word, low_index, high_index):
     """ Faça o código aqui. """
     if not word:
