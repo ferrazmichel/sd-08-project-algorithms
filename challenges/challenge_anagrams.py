@@ -9,6 +9,7 @@ def quicksort(_l):
         return left + [_l[0]] * _l.count(_l[0]) + right
     return []
 
+
 def is_anagram(first_string, second_string):
     """ Faça o código aqui. """
     if len(first_string) != len(second_string):
@@ -19,6 +20,5 @@ def is_anagram(first_string, second_string):
     second_list = quicksort(second_string)
 
     return first_list == second_list
-
 
     """ Inspirado em: https://wiki.python.org.br/QuickSort """
