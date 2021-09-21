@@ -22,3 +22,4 @@ def is_anagram(first_string, second_string):
     return first_list == second_list
 
     """ Inspirado em: https://wiki.python.org.br/QuickSort """
+    
