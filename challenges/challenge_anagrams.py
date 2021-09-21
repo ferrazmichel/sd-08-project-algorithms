@@ -6,6 +6,7 @@ def merge_sort(array):
     left, right = merge_sort(array[:mid]), merge_sort(array[mid:])
     return merge(left, right, array.copy())
 
+
 def merge(left, right, merged):
     left_cursor, right_cursor = 0, 0
 
@@ -26,10 +27,12 @@ def merge(left, right, merged):
 
     return merged
 
+
 def is_anagram(first_string, second_string):
     try:
         if len(first_string) != len(second_string):
             return False
-        return merge_sort(list(first_string)) == merge_sort(list(second_string))
+        return merge_sort(list(first_string)) == merge_sort(
+            list(second_string))
     except TypeError:
         return False
