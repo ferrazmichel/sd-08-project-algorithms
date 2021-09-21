@@ -35,6 +35,3 @@ def search_num(array, low_index, high_index, num):
         return search_num(array, low_index, middle_index - 1, num)
     else:
         return search_num(array, middle_index + 1, high_index, num)
-
-
-print(find_duplicate([2, 3, 1]))
