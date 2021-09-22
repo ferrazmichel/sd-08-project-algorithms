@@ -1,5 +1,6 @@
 def study_schedule(permanence_period, target_time):
-    """ Returns number os students given a permanence period and a target time """
+    """ Returns number of students """
+    """ given a permanence period and a target time """
     number_of_students = 0
     for arrive_time, leave_time in permanence_period:
         try:
