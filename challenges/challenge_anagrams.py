@@ -24,3 +24,10 @@ def merge(left_array, right_array):
             right_index += 1
 
     return merged + left_array[left_index:] + right_array[right_index:]
+
+
+def is_anagram(first_string, second_string):
+    sorted_first = merge_sort(list(first_string))
+    sorted_second = merge_sort(list(second_string))
+
+    return sorted_first == sorted_second
