@@ -1,2 +1,11 @@
+
 def study_schedule(permanence_period, target_time):
-    """Iniciando Projeto VQV vai dar bom!"""
+    counter = 0
+
+    try:
+        for value, element in permanence_period:
+            if value < target_time and target_time < element:
+                counter += 1
+        return counter
+    except TypeError:
+        return None
