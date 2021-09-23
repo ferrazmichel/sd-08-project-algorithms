@@ -12,7 +12,7 @@ def study_schedule(permanence_period, target_time):
         return None
     counter = 0
     for times in permanence_period:
-        if any(not isinstance(time, int) for time in times):
+        if any([not isinstance(time, int) for time in times]):
             return None
         elif times[0] <= target_time <= times[1]:
             counter += 1
