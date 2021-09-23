@@ -1,4 +1,6 @@
 def study_schedule(permanence_period, target_time):
+    if len(permanence_period) != 2:
+        return None
     if not target_time:
         return None
     amount = 0
