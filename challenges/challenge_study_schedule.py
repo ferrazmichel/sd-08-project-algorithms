@@ -1,2 +1,2 @@
 def study_schedule(permanence_period, target_time):
-    """ Faça o código aqui. """
+    """ Função para identificar o horário com maior tráfego no site da escola """
