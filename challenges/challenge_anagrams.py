@@ -6,7 +6,8 @@ def ordenar_string(array):
 
     metade = len(array) // 2
 
-    left, right = ordenar_string(array[:metade]), ordenar_string(array[metade:])
+    left, right = ordenar_string(array[:metade]), ordenar_string(
+        array[metade:])
     return merge(left, right, array.copy())
 
 
@@ -33,11 +34,12 @@ def merge(left, right, merged):
 
 
 def is_anagram(first_string, second_string):
-    """Função para descobir anagramas""" 
+    """Função para descobir anagramas"""
     if len(first_string) != len(second_string):
         return False
 
-    if ordenar_string(list(first_string)) == ordenar_string(list(second_string)):
+    if ordenar_string(list(first_string)) == ordenar_string(
+      list(second_string)):
         return True
     else:
         return False
